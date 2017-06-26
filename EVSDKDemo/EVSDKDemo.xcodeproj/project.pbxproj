@@ -24,7 +24,6 @@
 		310547E41DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 310547E31DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd */; };
 		310C3E9F1D781907006E6573 /* zebra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 310C3E9E1D781907006E6573 /* zebra.mp3 */; };
 		310FD3911D5869BA001DD0A3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310FD38F1D586576001DD0A3 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		311318641DCB224400A5029D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311318631DCB224400A5029D /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		31138D451DD5ABBE00378BA0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31138D441DD5ABBE00378BA0 /* libsqlite3.tbd */; };
 		3116D6151D5D279F005FEE5A /* EVNetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3116D6141D5D279F005FEE5A /* EVNetRequestManager.m */; };
 		3116D6181D5D7F07005FEE5A /* EVDemoWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3116D6171D5D7F07005FEE5A /* EVDemoWatchViewController.m */; };
@@ -35,7 +34,6 @@
 		31540D551E9F78EF0019E09E /* videoprp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D531E9F78EF0019E09E /* videoprp.framework */; };
 		31540D571E9F79360019E09E /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D561E9F79360019E09E /* libc++.1.tbd */; };
 		31540D591E9F79530019E09E /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D581E9F79530019E09E /* libpthread.tbd */; };
-		31540D5B1E9F79690019E09E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D5A1E9F79690019E09E /* GLKit.framework */; };
 		31540D5D1E9F797E0019E09E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D5C1E9F797E0019E09E /* CoreTelephony.framework */; };
 		31983D3D1D4F5AAE0057210D /* EVDemoLiveSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31983D3C1D4F5AAE0057210D /* EVDemoLiveSettingViewController.m */; };
 		31FFA3B41D4537200087D0FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA3B31D4537200087D0FC /* main.m */; };
@@ -54,7 +52,6 @@
 		31FFA41F1D4A17F70087D0FC /* CCAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA41E1D4A17F70087D0FC /* CCAlertManager.m */; };
 		31FFA4221D4A1A680087D0FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4211D4A1A680087D0FC /* AVFoundation.framework */; };
 		31FFA4241D4A1A9E0087D0FC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4231D4A1A9E0087D0FC /* CoreMedia.framework */; };
-		31FFA4261D4A1AB20087D0FC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4251D4A1AB20087D0FC /* OpenGLES.framework */; };
 		31FFA4281D4A1ABB0087D0FC /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4271D4A1ABB0087D0FC /* VideoToolbox.framework */; };
 		31FFA42A1D4A1AC30087D0FC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4291D4A1AC30087D0FC /* AudioToolbox.framework */; };
 		31FFA42C1D4A1AD30087D0FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA42B1D4A1AD30087D0FC /* CoreGraphics.framework */; };
@@ -165,11 +162,9 @@
 				3146605D1DDDC8DA0015EB4B /* CoreMotion.framework in Frameworks */,
 				0CCB81991F00C40300748E88 /* libEVMessage.a in Frameworks */,
 				31540D5D1E9F797E0019E09E /* CoreTelephony.framework in Frameworks */,
-				31540D5B1E9F79690019E09E /* GLKit.framework in Frameworks */,
 				31540D591E9F79530019E09E /* libpthread.tbd in Frameworks */,
 				31540D571E9F79360019E09E /* libc++.1.tbd in Frameworks */,
 				31138D451DD5ABBE00378BA0 /* libsqlite3.tbd in Frameworks */,
-				311318641DCB224400A5029D /* UserNotifications.framework in Frameworks */,
 				310547E41DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd in Frameworks */,
 				314660651DDDCA090015EB4B /* libstdc++.tbd in Frameworks */,
 				310FD3911D5869BA001DD0A3 /* CoreFoundation.framework in Frameworks */,
@@ -182,7 +177,6 @@
 				0CCB819A1F00C47700748E88 /* EVSocket.framework in Frameworks */,
 				31FFA4281D4A1ABB0087D0FC /* VideoToolbox.framework in Frameworks */,
 				0CCB81961F00C40300748E88 /* libEVSDKBase.a in Frameworks */,
-				31FFA4261D4A1AB20087D0FC /* OpenGLES.framework in Frameworks */,
 				31540D551E9F78EF0019E09E /* videoprp.framework in Frameworks */,
 				31FFA4221D4A1A680087D0FC /* AVFoundation.framework in Frameworks */,
 				0CCB81A11F00DBCB00748E88 /* videoprp.framework in Frameworks */,
