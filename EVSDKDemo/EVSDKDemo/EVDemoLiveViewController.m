@@ -268,7 +268,6 @@
     self.streamer.useHEAAC = [(NSNumber *)self.streamerParams[kUseHighAACKey] boolValue];
     self.streamer.mute = [self.streamerParams[kMuteKey] boolValue];
     self.streamer.frontCamera = [self.streamerParams[kFrontCameraKey] boolValue];
-    self.streamer.flashOn = [self.streamerParams[kFlashlightKey] boolValue];
     [self.streamer enableFaceBeauty:[self.streamerParams[kBeautyKey] boolValue]];
 //    self.streamer.agoraAppid = @"your agoraAppid";
     
