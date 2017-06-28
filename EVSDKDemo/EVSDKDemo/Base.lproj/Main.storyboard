@@ -1359,13 +1359,13 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Msg:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-UC-3xL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-UC-3xL">
                                 <rect key="frame" x="15" y="124" width="50" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="fs8-vg-C3z"/>
                                     <constraint firstAttribute="height" constant="35" id="mTy-7m-t2a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1389,7 +1389,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="joinInTopic:" destination="rr5-ht-U2u" eventType="touchUpInside" id="kr0-6A-Ujw"/>
+                                    <action selector="joinInChannel:" destination="rr5-ht-U2u" eventType="touchUpInside" id="m15-g2-Uhc"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="你好" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BqY-fP-im8">
@@ -1432,7 +1432,7 @@
                                     <action selector="like:" destination="rr5-ht-U2u" eventType="touchUpInside" id="TcA-Yn-gd6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukf-Hg-fQO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukf-Hg-fQO">
                                 <rect key="frame" x="15" y="79" width="50" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="kHM-yp-NXY"/>
@@ -1474,7 +1474,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="leaveTopic:" destination="rr5-ht-U2u" eventType="touchUpInside" id="S3b-rE-Eul"/>
+                                    <action selector="leaveChannel:" destination="rr5-ht-U2u" eventType="touchUpInside" id="meP-3f-sth"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SH-iH-he3">
@@ -1546,9 +1546,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="channelTextField" destination="IHo-tj-Fak" id="1Us-ba-xCo"/>
                         <outlet property="messageShowStage" destination="uGi-6m-xuN" id="IfF-dw-gxE"/>
                         <outlet property="messageTestField" destination="BqY-fP-im8" id="E5W-AA-eRT"/>
-                        <outlet property="topicTextField" destination="IHo-tj-Fak" id="Fwa-BZ-jXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQW-2N-Wn5" userLabel="First Responder" sceneMemberID="firstResponder"/>

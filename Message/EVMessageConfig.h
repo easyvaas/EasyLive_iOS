@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, EVMessageErrorCode) {
     
     EVMessageErrorInternalServer = -3001,       /**< 消息服务器内部错误 */
     EVMessageErrorPermissionDenied = -3002,     /**< 没有权限 */
-    EVMessageErrorJoinTopic = -3003,            /**< 加入 topic 失败 */
+    EVMessageErrorJoinChannel = -3003,          /**< 加入频道失败 */
     EVMessageErrorSend = -3004,                 /**< 发送失败 */
     EVMessageErrorShutuped = -3005,             /**< 被禁言 */
 };

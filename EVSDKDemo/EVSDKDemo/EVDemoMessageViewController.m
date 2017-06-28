@@ -13,7 +13,7 @@
 
 @interface EVDemoMessageViewController ()<EVMessageProtocol, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *topicTextField;
+@property (weak, nonatomic) IBOutlet UITextField *channelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *messageTestField;
 @property (weak, nonatomic) IBOutlet UITextView *messageShowStage;
 @property (nonatomic, strong) NSMutableString *showText; /**< 展示区显示的文字 */
@@ -46,31 +46,31 @@
 
 #pragma mark - action
 
-- (IBAction)joinInTopic:(UIButton *)sender {
-    NSString *topic = self.topicTextField.text;
-    if (!topic) {
+- (IBAction)joinInChannel:(UIButton *)sender {
+    NSString *channel = self.channelTextField.text;
+    if (!channel) {
         return;
     }
-    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"connecting in topic:%@", topic]];
+    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"connecting in channel:%@", channel]];
     
-    [[EVMessageManager shareManager] connect:topic];
+    [[EVMessageManager shareManager] connect:channel];
 }
-- (IBAction)leaveTopic:(UIButton *)sender {
+- (IBAction)leaveChannel:(UIButton *)sender {
     if (_isConnected == false) {
         [[CCAlertManager shareInstance] performComfirmTitle:@"提示" message:@"请先点击‘join’加入该聊天服务器！" comfirmTitle:@"确定" WithComfirm:nil];
         return;
     }
-    NSString *topic = self.topicTextField.text;
-    if (!topic) {
+    NSString *channel = self.channelTextField.text;
+    if (!channel) {
         return;
     }
-    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Leaving topic:%@", topic]];
+    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Leaving channel:%@", channel]];
     __weak typeof(self) wSelf = self;
     
-    [[EVMessageManager shareManager] leaveWithTopic:topic result:^(NSDictionary *response, NSError *error) {
+    [[EVMessageManager shareManager] leaveWithChannel:channel result:^(NSDictionary *response, NSError *error) {
         __strong typeof(self) sSelf = wSelf;
         if (error == nil) {
-            [sSelf appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Success leave topic:%@", topic]];
+            [sSelf appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Success leave channel:%@", channel]];
         }
     }];
 }
@@ -79,8 +79,8 @@
         [[CCAlertManager shareInstance] performComfirmTitle:@"提示" message:@"请先点击‘join’加入该聊天服务器！" comfirmTitle:@"确定" WithComfirm:nil];
         return;
     }
-    NSString *topic = self.topicTextField.text;
-    if (!topic) {
+    NSString *channel = self.channelTextField.text;
+    if (!channel) {
         return;
     }
     NSString *message = [self.messageTestField.text mutableCopy];
@@ -94,7 +94,7 @@
                                         }
                                 };
     __weak typeof(self) wSelf = self;
-    [[EVMessageManager shareManager] sendWithTopic:topic message:message userData:extension type:EVMessageTypeMsg result:^(NSDictionary *response, NSError *error) {
+    [[EVMessageManager shareManager] sendWithChannel:channel message:message userData:extension type:EVMessageTypeMsg result:^(NSDictionary *response, NSError *error) {
         __strong typeof(self) sSelf = wSelf;
         if (error) {
             [sSelf appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Failed send message with error :%@", error]];
@@ -108,14 +108,14 @@
         [[CCAlertManager shareInstance] performComfirmTitle:@"提示" message:@"请先点击‘join’加入该聊天服务器！" comfirmTitle:@"确定" WithComfirm:nil];
         return;
     }
-    NSString *topic = self.topicTextField.text;
-    if (!topic)
+    NSString *channel = self.channelTextField.text;
+    if (!channel)
         return;
     
     [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@">add like:%@", @"10"]];
     // 测试点赞
     __weak typeof(self) wSelf = self;
-    [[EVMessageManager shareManager] addLikeCountWithTopic:topic count:10 result:^(NSDictionary *response, NSError *error) {
+    [[EVMessageManager shareManager] addLikeCountWithChannel:channel count:10 result:^(NSDictionary *response, NSError *error) {
         __strong typeof(self) sSelf = wSelf;
         if (error) {
             [sSelf appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"Failed add like count with error :%@", error]];
@@ -128,8 +128,12 @@
         return;
     }
     
+    NSString *channel = self.channelTextField.text;
+    if (!channel)
+        return;
+    
     __weak typeof(self) wSelf = self;
-    [[EVMessageManager shareManager] getLastHistoryMessageWithTopic:self.topicTextField.text count:20 type:EVMessageTypeMsg result:^(NSDictionary *response, NSError *error) {
+    [[EVMessageManager shareManager] getLastHistoryMessageWithChannel:channel count:20 type:EVMessageTypeMsg result:^(NSDictionary *response, NSError *error) {
         __strong typeof(self) sSelf = wSelf;
         
         if (error == nil) {
@@ -168,28 +172,28 @@
     }
 }
 
-- (void)EVMessageRecievedNewMessageInTopic:(NSString *)topic sendedFrom:(NSString *)userid message:(NSString *)message userData:(NSDictionary *)userData {
-    [self appendUser:userid string:[NSString stringWithFormat:@"<-topic:%@ \ruserid:%@ \rmessage:%@ \ruserdata:%@", topic, userid, message, userData]];
+- (void)EVMessageRecievedNewMessageInChannel:(NSString *)channel sendedFrom:(NSString *)userid message:(NSString *)message userData:(NSDictionary *)userData {
+    [self appendUser:userid string:[NSString stringWithFormat:@"<-channel:%@ \ruserid:%@ \rmessage:%@ \ruserdata:%@", userData, userid, message, userData]];
 }
 
-- (void)EVMessageUsers:(NSArray<NSString *> *)userids joinedTopic:(NSString *)topic {
-    [self handleJoinOrLeaveWithType:YES users:userids topic:topic from:@"admin"];
+- (void)EVMessageUsers:(NSArray<NSString *> *)userids joinedChannel:(NSString *)channel {
+    [self handleJoinOrLeaveWithType:YES users:userids channel:channel from:@"admin"];
 }
 
-- (void)EVMessageUsers:(NSArray<NSString *> *)userids leftTopic:(NSString *)topic {
-    [self handleJoinOrLeaveWithType:NO users:userids topic:topic from:@"admin"];
+- (void)EVMessageUsers:(NSArray<NSString *> *)userids leftChannel:(NSString *)channel {
+    [self handleJoinOrLeaveWithType:NO users:userids channel:channel from:@"admin"];
 }
 
-- (void)EVMessageDidUpdateLikeCount:(long long)likeCount inTopic:(NSString *)topic {
-    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-topic:%@ \rlike count:%zd", topic, likeCount]];
+- (void)EVMessageDidUpdateLikeCount:(long long)likeCount inChannel:(NSString *)channel {
+    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-channel:%@ \rlike count:%zd", channel, likeCount]];
 }
 
-- (void)EVMessageDidUpdateWatchingCount:(NSInteger)watchingCount inTopic:(NSString *)topic {
-    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-topic:%@ \rwatching count:%zd", topic, watchingCount]];
+- (void)EVMessageDidUpdateWatchingCount:(NSInteger)watchingCount inChannel:(NSString *)channel {
+    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-channel:%@ \rwatching count:%zd", channel, watchingCount]];
 }
 
-- (void)EVMessageDidUpdateWatchedCount:(NSInteger)watchedCount inTopic:(NSString *)topic {
-    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-topic:%@ \rwatched count:%zd", topic, watchedCount]];
+- (void)EVMessageDidUpdateWatchedCount:(NSInteger)watchedCount inChannel:(NSString *)channel {
+    [self appendUser:[EVSDKManager userID] string:[NSString stringWithFormat:@"<-channel:%@ \rwatched count:%zd", channel, watchedCount]];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -229,7 +233,7 @@
     return dateString;
 }
 
-- (void)handleJoinOrLeaveWithType:(BOOL)join users:(NSArray *)users topic:(NSString *)topic from:(NSString *)sender{
+- (void)handleJoinOrLeaveWithType:(BOOL)join users:(NSArray *)users channel:(NSString *)channel from:(NSString *)sender{
     NSMutableString *usersStr = [@"" mutableCopy];
     for (NSString *userid in users) {
         [usersStr appendFormat:@"%@,", userid];
