@@ -104,6 +104,9 @@
 }
 
 #pragma mark - EVPlayerDelegate
+- (void)EVPlayerFirstVideoFrameDidRender:(EVPlayer *)player {
+    NSLog(@"视频第一帧已渲染");
+}
 - (void)EVPlayerDidFinishPlay:(EVPlayer *)player reason:(MPMovieFinishReason)reason {
     NSLog(@"播放完毕");
 }

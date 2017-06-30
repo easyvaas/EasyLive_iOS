@@ -66,18 +66,6 @@
 }
 
 
-#pragma mark - EVPlayerDelegate
-
-- (void)EVPlayer:(EVPlayer *)player didChangedState:(EVPlayerState)state{
-    switch (state) {
-        case EVPlayerStatePlaying:
-            break;
-            
-        default:
-            break;
-    }
-}
-
 #pragma mark - EVStreamerDelegate
 - (void)EVStreamerUpdateVideoChatState:(EVVideoChatState)chatState{
     NSLog(@"连麦状态：%lu", chatState);
