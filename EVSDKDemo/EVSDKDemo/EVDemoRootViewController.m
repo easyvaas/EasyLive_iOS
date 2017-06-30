@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *appkeyField;
 @property (weak, nonatomic) IBOutlet UITextField *appSecreteField;
 @property (weak, nonatomic) IBOutlet UITextField *useridField;
+@property (weak, nonatomic) IBOutlet UILabel *SDKVersionLabel;
 
 @end
 
@@ -29,6 +30,7 @@
     [super viewDidLoad];
     
     [self addObserver];
+    self.SDKVersionLabel.text = [NSString stringWithFormat:@"SDK Version:%@", [EVSDKManager SDKVersion]];
 }
 
 - (void)dealloc{

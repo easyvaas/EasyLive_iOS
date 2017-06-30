@@ -54,6 +54,13 @@ FOUNDATION_EXTERN NSString * const EVSDKInitErrorNotification;
  */
 + (BOOL)isSDKInitedSuccess;
 
+/**
+ 获取 SDK 版本号
+
+ @return 版本号
+ */
++ (NSString *)SDKVersion;
+
 @end
 
 #pragma clang diagnostic pop

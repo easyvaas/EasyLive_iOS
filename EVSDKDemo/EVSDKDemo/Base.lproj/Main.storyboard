@@ -1286,9 +1286,19 @@
                                     <segue destination="p8i-CX-4IX" kind="show" id="4Rv-cN-Sas"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK version:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39b-Zn-fjz">
+                                <rect key="frame" x="15" y="632" width="345" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MSL-ha-Qfm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="39b-Zn-fjz" firstAttribute="leading" secondItem="ZLw-rz-Vwa" secondAttribute="leading" constant="15" id="0FU-3S-wkH"/>
                             <constraint firstItem="Q1X-Qc-yB7" firstAttribute="leading" secondItem="7SY-Ml-DtX" secondAttribute="trailing" constant="8" id="2lJ-1P-IUe"/>
                             <constraint firstItem="7SY-Ml-DtX" firstAttribute="top" secondItem="OyO-hq-C4Z" secondAttribute="bottom" constant="200" id="48c-Rb-M3y"/>
                             <constraint firstItem="7SY-Ml-DtX" firstAttribute="leading" secondItem="ZLw-rz-Vwa" secondAttribute="leadingMargin" id="4YX-fy-ApK"/>
@@ -1298,7 +1308,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Q1X-Qc-yB7" secondAttribute="trailing" id="JWk-i8-LaS"/>
                             <constraint firstItem="Q1X-Qc-yB7" firstAttribute="width" secondItem="7SY-Ml-DtX" secondAttribute="width" id="JfJ-d3-bK8"/>
                             <constraint firstItem="iUT-c4-SrL" firstAttribute="leading" secondItem="qIG-aE-rvI" secondAttribute="leading" id="Lon-ep-oru"/>
+                            <constraint firstAttribute="trailing" secondItem="39b-Zn-fjz" secondAttribute="trailing" constant="15" id="Oqc-Ry-toY"/>
                             <constraint firstItem="qIG-aE-rvI" firstAttribute="trailing" secondItem="ZLw-rz-Vwa" secondAttribute="trailingMargin" id="PcJ-pf-JsQ"/>
+                            <constraint firstItem="Fzn-tQ-SzF" firstAttribute="top" secondItem="39b-Zn-fjz" secondAttribute="bottom" constant="15" id="SMw-rh-dCK"/>
                             <constraint firstItem="s38-A0-4qg" firstAttribute="top" secondItem="AWR-Pm-GRl" secondAttribute="bottom" constant="14" id="b7I-Us-GGp"/>
                             <constraint firstItem="AWR-Pm-GRl" firstAttribute="trailing" secondItem="qIG-aE-rvI" secondAttribute="trailing" id="d5p-hZ-DJB"/>
                             <constraint firstItem="HJo-OS-cpe" firstAttribute="top" secondItem="7SY-Ml-DtX" secondAttribute="bottom" constant="12" id="kTY-YR-QRO"/>
@@ -1318,6 +1330,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="14D-hb-4cM"/>
                     <connections>
+                        <outlet property="SDKVersionLabel" destination="39b-Zn-fjz" id="Q9u-ul-rgj"/>
                         <outlet property="appSecreteField" destination="0cd-Fy-f97" id="2ID-lG-0cg"/>
                         <outlet property="appidField" destination="PbB-y8-3Nd" id="jZB-4y-RxY"/>
                         <outlet property="appkeyField" destination="hpP-he-Ni3" id="JkS-at-MyF"/>
