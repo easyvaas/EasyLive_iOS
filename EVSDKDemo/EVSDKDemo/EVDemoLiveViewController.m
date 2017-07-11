@@ -269,7 +269,7 @@
     self.streamer.mute = [self.streamerParams[kMuteKey] boolValue];
     self.streamer.frontCamera = [self.streamerParams[kFrontCameraKey] boolValue];
     [self.streamer enableFaceBeauty:[self.streamerParams[kBeautyKey] boolValue]];
-//    self.streamer.agoraAppid = @"your agoraAppid";
+//    self.streamer.agoraAppid = @"your agoraId";
     
     __weak typeof(self) wSelf = self;
     [self.streamer livePrepareComplete:^(EVStreamerResponseCode responseCode, NSDictionary *result, NSError *err) {

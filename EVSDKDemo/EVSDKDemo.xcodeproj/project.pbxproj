@@ -418,7 +418,7 @@
 					31FFA3AE1D4537200087D0FC = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = PWD8THY2VS;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -601,7 +601,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jianwen Chen (N7DCS5PGEW)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PWD8THY2VS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -625,10 +625,10 @@
 					"-liconv",
 					"-lbz2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.elapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6b76992c-c689-4b96-9272-4285d6d490ea";
+				PROVISIONING_PROFILE_SPECIFIER = EVSdkDemo_dev_20170710;
 			};
 			name = Debug;
 		};
@@ -637,9 +637,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jianwen Chen (N7DCS5PGEW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Cloud Focus Digital Co., Ltd (PWD8THY2VS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = PWD8THY2VS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -663,10 +663,10 @@
 					"-liconv",
 					"-lbz2",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.elapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "dc9a0f0e-c8ca-46bd-aede-7b34aea072a6";
+				PROVISIONING_PROFILE_SPECIFIER = EVSdkDemo_appstore_20170710;
 			};
 			name = Release;
 		};

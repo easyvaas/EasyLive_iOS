@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *closeBtn;
 @property (nonatomic, strong) EVPlayer *player; /**< 播放器 */
 @property (nonatomic, strong) EVStreamer *streamer; /**< 推流端 */
+@property (nonatomic, copy) NSString *agoraAppId;
 
 @end
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+//    self.agoraAppId = @"your agoraId";
     [self setUpPlayer];
 }
 
@@ -41,7 +43,7 @@
 }
 
 - (IBAction)interactiveLiveButtonClicked:(UIButton *)sender {
-    if (self.streamer && !self.streamer.agoraAppid) {
+    if (!self.agoraAppId) {
         [[CCAlertManager shareInstance] performComfirmTitle:nil message:@"请先设置agoraAppid" comfirmTitle:@"确定" WithComfirm:nil];
         return;
     }
@@ -52,10 +54,9 @@
             self.streamer = [[EVStreamer alloc] init];
             self.streamer.delegate = self;
             self.streamer.frontCamera = YES;
-//            self.streamer.presentView = self.containerView;
             [self.containerView addSubview:self.streamer.preview];
             self.streamer.preview.frame = self.containerView.bounds;
-//            self.streamer.agoraAppid = @"your agoraAppid";
+            self.streamer.agoraAppid = self.agoraAppId;
             [self.streamer livePrepareComplete:nil];
             [self.streamer startPreview];
         }
