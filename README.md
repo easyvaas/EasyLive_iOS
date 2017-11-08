@@ -2,6 +2,8 @@
 
 [易视云 iOS SDK][libeasyvaasios] 是易视云提供的 iOS 平台完整直播方案，包含*推流、拉流、消息系统*三大模块，简单易用。
 
+文档地址 https://easyvaas.github.io/doc/chapter4/iOS.html
+
 ## 一. 功能特性
 易视云 iOS SDK 包含以下功能点：
 
