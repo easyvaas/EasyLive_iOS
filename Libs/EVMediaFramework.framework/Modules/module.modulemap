@@ -1,0 +1,6 @@
+framework module EVMediaFramework {
+  umbrella header "EVMediaFramework.h"
+
+  export *
+  module * { export * }
+}

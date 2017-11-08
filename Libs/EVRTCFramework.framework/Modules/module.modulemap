@@ -1,0 +1,6 @@
+framework module EVRTCFramework {
+  umbrella header "EVRTCFramework.h"
+
+  export *
+  module * { export * }
+}

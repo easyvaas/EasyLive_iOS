@@ -1,0 +1,6 @@
+framework module EVSDKBaseFramework {
+  umbrella header "EVSDKBaseFramework.h"
+
+  export *
+  module * { export * }
+}

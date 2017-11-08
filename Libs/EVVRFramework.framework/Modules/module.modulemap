@@ -1,0 +1,6 @@
+framework module EVVRFramework {
+  umbrella header "EVVRFramework.h"
+
+  export *
+  module * { export * }
+}

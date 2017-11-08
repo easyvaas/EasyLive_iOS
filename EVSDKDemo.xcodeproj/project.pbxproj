@@ -1,0 +1,1026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0619751FB2D81800CA4090 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */; };
+		0C0619761FB2D81800CA4090 /* EVMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */; };
+		0C0619771FB2D81800CA4090 /* EVMessageFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */; };
+		0C0619781FB2D81800CA4090 /* EVRTCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */; };
+		0C06197A1FB2D81800CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
+		0C06197B1FB2D81800CA4090 /* EVVRFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */; };
+		0C06197C1FB2D81800CA4090 /* ios_player_dylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; };
+		0C06197D1FB2D81800CA4090 /* videoprp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619741FB2D7D700CA4090 /* videoprp.framework */; };
+		0C06197E1FB2D89900CA4090 /* EVSDKBaseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */; };
+		0C06197F1FB2D9F800CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
+		0C0619801FB2D9F800CA4090 /* EVSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C0619811FB2D9FB00CA4090 /* ios_player_dylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; };
+		0C0619821FB2D9FB00CA4090 /* ios_player_dylib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C0619831FB2DA3E00CA4090 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */; };
+		0C0619841FB2DA3E00CA4090 /* EVMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */; };
+		0C0619851FB2DA3E00CA4090 /* EVMessageFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */; };
+		0C0619861FB2DA3E00CA4090 /* EVRTCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */; };
+		0C0619871FB2DA3E00CA4090 /* EVSDKBaseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */; };
+		0C0619881FB2DA3E00CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
+		0C0619891FB2DA3E00CA4090 /* EVVRFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */; };
+		0C06198A1FB2DA3E00CA4090 /* ios_player_dylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; };
+		0C06198B1FB2DA3E00CA4090 /* videoprp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619741FB2D7D700CA4090 /* videoprp.framework */; };
+		0C06198C1FB2DA4900CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
+		0C06198D1FB2DA4900CA4090 /* EVSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C06198E1FB2DA4900CA4090 /* ios_player_dylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; };
+		0C06198F1FB2DA4900CA4090 /* ios_player_dylib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C0BA83F1F271FCD00D0940B /* EVConfigBeautyLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0BA83E1F271FCD00D0940B /* EVConfigBeautyLevelViewController.m */; };
+		0C4045001F3B161200808225 /* CCAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044F41F3B161200808225 /* CCAlertManager.m */; };
+		0C4045011F3B161200808225 /* EVMediaAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044F61F3B161200808225 /* EVMediaAuth.m */; };
+		0C4045021F3B161200808225 /* EVNetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044F81F3B161200808225 /* EVNetRequestManager.m */; };
+		0C4045031F3B161200808225 /* EVScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044FA1F3B161200808225 /* EVScreenManager.m */; };
+		0C4045041F3B161200808225 /* EVGenerateQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044FD1F3B161200808225 /* EVGenerateQRViewController.m */; };
+		0C4045051F3B161200808225 /* EVScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4044FF1F3B161200808225 /* EVScanQRViewController.m */; };
+		0C40450C1F3B18BC00808225 /* EVDemoMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40450B1F3B18BC00808225 /* EVDemoMessageViewController.swift */; };
+		0C40450E1F3B18D900808225 /* EVDemoWatchSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40450D1F3B18D900808225 /* EVDemoWatchSettingViewController.swift */; };
+		0C4045101F3B18E700808225 /* EVDemoLiveSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40450F1F3B18E700808225 /* EVDemoLiveSettingViewController.swift */; };
+		0C530F381F14F3E500780947 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C530F371F14F3E500780947 /* libresolv.tbd */; };
+		0C64E98E1F19FB6B00C87F3C /* EVScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64E98D1F19FB6B00C87F3C /* EVScreenManager.m */; };
+		0C7272FE1F3C513C00220AA8 /* EVProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7272FD1F3C513C00220AA8 /* EVProgressView.swift */; };
+		0C7273001F3C517300220AA8 /* EVDemoWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7272FF1F3C517300220AA8 /* EVDemoWatchViewController.swift */; };
+		0C7273021F3C517F00220AA8 /* EVDemoWatchRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7273011F3C517F00220AA8 /* EVDemoWatchRecordViewController.swift */; };
+		0C7273041F3C519D00220AA8 /* EVWatchVRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7273031F3C519D00220AA8 /* EVWatchVRViewController.swift */; };
+		0C866AD61F26E0AE00D1B83B /* EVMediaAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C866AD51F26E0AE00D1B83B /* EVMediaAuth.m */; };
+		0C8BF3BA1F3BFE810095A0A8 /* EVDemoLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BF3B91F3BFE810095A0A8 /* EVDemoLiveViewController.swift */; };
+		0C9A05931F14E1CA00F9C6E1 /* EVDemoMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05811F14E1CA00F9C6E1 /* EVDemoMessageViewController.m */; };
+		0C9A05941F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05841F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.m */; };
+		0C9A05951F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05861F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.m */; };
+		0C9A05961F14E1CA00F9C6E1 /* EVDemoWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05881F14E1CA00F9C6E1 /* EVDemoWatchViewController.m */; };
+		0C9A05991F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05901F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.m */; };
+		0C9A059A1F14E1CA00F9C6E1 /* EVDemoLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05921F14E1CA00F9C6E1 /* EVDemoLiveViewController.m */; };
+		0C9A059F1F14E1DE00F9C6E1 /* CCAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A059C1F14E1DE00F9C6E1 /* CCAlertManager.m */; };
+		0C9A05A01F14E1DE00F9C6E1 /* EVNetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A059E1F14E1DE00F9C6E1 /* EVNetRequestManager.m */; };
+		0C9A05A31F14E23800F9C6E1 /* EVProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A05A21F14E23800F9C6E1 /* EVProgressView.m */; };
+		0C9AA6451ECEA48E00F16FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3B0831ECDB71900F29AF3 /* Main.storyboard */; };
+		0C9F08101F3C13BA00032D0E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C530F371F14F3E500780947 /* libresolv.tbd */; };
+		0C9F08111F3C13BF00032D0E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C530F391F14F41F00780947 /* libc++.tbd */; };
+		0C9F08121F3C13C300032D0E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA42D1D4A1BB60087D0FC /* libz.tbd */; };
+		0C9F08131F3C13CE00032D0E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D5C1E9F797E0019E09E /* CoreTelephony.framework */; };
+		0C9F08141F3C13D500032D0E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4231D4A1A9E0087D0FC /* CoreMedia.framework */; };
+		0C9F08151F3C13D500032D0E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3146605B1DDDC8210015EB4B /* CoreMotion.framework */; };
+		0C9F08171F3C13DA00032D0E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9F08161F3C13DA00032D0E /* CoreVideo.framework */; };
+		0C9F08181F3C13DF00032D0E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4251D4A1AB20087D0FC /* OpenGLES.framework */; };
+		0C9F081A1F3C13E500032D0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9F08191F3C13E500032D0E /* QuartzCore.framework */; };
+		0C9F081B1F3C13EA00032D0E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3E31D45C15A0087D0FC /* Security.framework */; };
+		0C9F081C1F3C13F500032D0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4291D4A1AC30087D0FC /* AudioToolbox.framework */; };
+		0C9F081D1F3C13F500032D0E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4271D4A1ABB0087D0FC /* VideoToolbox.framework */; };
+		0C9F081E1F3C13FA00032D0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4211D4A1A680087D0FC /* AVFoundation.framework */; };
+		0C9F08201F3C364700032D0E /* zebra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F081F1F3C364700032D0E /* zebra.mp3 */; };
+		0C9F08241F3C3AA200032D0E /* EVConfigBeautyLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F08231F3C3AA200032D0E /* EVConfigBeautyLevelViewController.swift */; };
+		0CA0534F1EFA6A280066F904 /* EVGenerateQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0534C1EFA6A280066F904 /* EVGenerateQRViewController.m */; };
+		0CA053501EFA6A280066F904 /* EVScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0534E1EFA6A280066F904 /* EVScanQRViewController.m */; };
+		0CE3B0801ECDB71900F29AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3B07F1ECDB71900F29AF3 /* AppDelegate.swift */; };
+		0CE3B0871ECDB71900F29AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3B0861ECDB71900F29AF3 /* Assets.xcassets */; };
+		0CE3B08A1ECDB71900F29AF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE3B0881ECDB71900F29AF3 /* LaunchScreen.storyboard */; };
+		0CE3B0A31ECE8F9200F29AF3 /* EVDemoRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3B0A21ECE8F9200F29AF3 /* EVDemoRootViewController.swift */; };
+		0CE9B6F91F1E0AB800C3A6C6 /* EVWatchVRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE9B6F81F1E0AB800C3A6C6 /* EVWatchVRViewController.m */; };
+		310547E41DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 310547E31DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd */; };
+		310C3E9F1D781907006E6573 /* zebra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 310C3E9E1D781907006E6573 /* zebra.mp3 */; };
+		310FD3911D5869BA001DD0A3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310FD38F1D586576001DD0A3 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		311318641DCB224400A5029D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311318631DCB224400A5029D /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		31138D451DD5ABBE00378BA0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31138D441DD5ABBE00378BA0 /* libsqlite3.tbd */; };
+		3146605D1DDDC8DA0015EB4B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3146605B1DDDC8210015EB4B /* CoreMotion.framework */; };
+		314660651DDDCA090015EB4B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 314660641DDDCA090015EB4B /* libstdc++.tbd */; };
+		31540D571E9F79360019E09E /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D561E9F79360019E09E /* libc++.1.tbd */; };
+		31540D591E9F79530019E09E /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D581E9F79530019E09E /* libpthread.tbd */; };
+		31540D5B1E9F79690019E09E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D5A1E9F79690019E09E /* GLKit.framework */; };
+		31540D5D1E9F797E0019E09E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31540D5C1E9F797E0019E09E /* CoreTelephony.framework */; };
+		31FFA3B41D4537200087D0FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA3B31D4537200087D0FC /* main.m */; };
+		31FFA3B71D4537200087D0FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA3B61D4537200087D0FC /* AppDelegate.m */; };
+		31FFA3BD1D4537200087D0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FFA3BB1D4537200087D0FC /* Main.storyboard */; };
+		31FFA3BF1D4537200087D0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FFA3BE1D4537200087D0FC /* Assets.xcassets */; };
+		31FFA3C21D4537200087D0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FFA3C01D4537200087D0FC /* LaunchScreen.storyboard */; };
+		31FFA3DC1D4599470087D0FC /* EVDemoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA3DB1D4599470087D0FC /* EVDemoRootViewController.m */; };
+		31FFA3E41D45C15A0087D0FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3E31D45C15A0087D0FC /* Security.framework */; };
+		31FFA3E61D45C16D0087D0FC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3E51D45C16D0087D0FC /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		31FFA3E81D45C1760087D0FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3E71D45C1760087D0FC /* Foundation.framework */; };
+		31FFA3EA1D45C18C0087D0FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3E91D45C18C0087D0FC /* UIKit.framework */; };
+		31FFA3EC1D45C1950087D0FC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA3EB1D45C1950087D0FC /* libicucore.tbd */; };
+		31FFA4221D4A1A680087D0FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4211D4A1A680087D0FC /* AVFoundation.framework */; };
+		31FFA4241D4A1A9E0087D0FC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4231D4A1A9E0087D0FC /* CoreMedia.framework */; };
+		31FFA4261D4A1AB20087D0FC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4251D4A1AB20087D0FC /* OpenGLES.framework */; };
+		31FFA4281D4A1ABB0087D0FC /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4271D4A1ABB0087D0FC /* VideoToolbox.framework */; };
+		31FFA42A1D4A1AC30087D0FC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA4291D4A1AC30087D0FC /* AudioToolbox.framework */; };
+		31FFA42C1D4A1AD30087D0FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA42B1D4A1AD30087D0FC /* CoreGraphics.framework */; };
+		31FFA42E1D4A1BB60087D0FC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFA42D1D4A1BB60087D0FC /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C676EA91F1F4CCB0040A0A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C0619821FB2D9FB00CA4090 /* ios_player_dylib.framework in Embed Frameworks */,
+				0C0619801FB2D9F800CA4090 /* EVSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CA19B4D1EF3F44800D929C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C06198F1FB2DA4900CA4090 /* ios_player_dylib.framework in Embed Frameworks */,
+				0C06198D1FB2DA4900CA4090 /* EVSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
+		0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVMediaFramework.framework; sourceTree = "<group>"; };
+		0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVMessageFramework.framework; sourceTree = "<group>"; };
+		0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVRTCFramework.framework; sourceTree = "<group>"; };
+		0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVSDKBaseFramework.framework; sourceTree = "<group>"; };
+		0C0619711FB2D7D700CA4090 /* EVSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVSocket.framework; sourceTree = "<group>"; };
+		0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVVRFramework.framework; sourceTree = "<group>"; };
+		0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ios_player_dylib.framework; sourceTree = "<group>"; };
+		0C0619741FB2D7D700CA4090 /* videoprp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = videoprp.framework; sourceTree = "<group>"; };
+		0C0BA83D1F271FCD00D0940B /* EVConfigBeautyLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVConfigBeautyLevelViewController.h; sourceTree = "<group>"; };
+		0C0BA83E1F271FCD00D0940B /* EVConfigBeautyLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVConfigBeautyLevelViewController.m; sourceTree = "<group>"; };
+		0C4044F31F3B161200808225 /* CCAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAlertManager.h; sourceTree = "<group>"; };
+		0C4044F41F3B161200808225 /* CCAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAlertManager.m; sourceTree = "<group>"; };
+		0C4044F51F3B161200808225 /* EVMediaAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVMediaAuth.h; sourceTree = "<group>"; };
+		0C4044F61F3B161200808225 /* EVMediaAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVMediaAuth.m; sourceTree = "<group>"; };
+		0C4044F71F3B161200808225 /* EVNetRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVNetRequestManager.h; sourceTree = "<group>"; };
+		0C4044F81F3B161200808225 /* EVNetRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVNetRequestManager.m; sourceTree = "<group>"; };
+		0C4044F91F3B161200808225 /* EVScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVScreenManager.h; sourceTree = "<group>"; };
+		0C4044FA1F3B161200808225 /* EVScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVScreenManager.m; sourceTree = "<group>"; };
+		0C4044FC1F3B161200808225 /* EVGenerateQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVGenerateQRViewController.h; sourceTree = "<group>"; };
+		0C4044FD1F3B161200808225 /* EVGenerateQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVGenerateQRViewController.m; sourceTree = "<group>"; };
+		0C4044FE1F3B161200808225 /* EVScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVScanQRViewController.h; sourceTree = "<group>"; };
+		0C4044FF1F3B161200808225 /* EVScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVScanQRViewController.m; sourceTree = "<group>"; };
+		0C40450B1F3B18BC00808225 /* EVDemoMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoMessageViewController.swift; sourceTree = "<group>"; };
+		0C40450D1F3B18D900808225 /* EVDemoWatchSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoWatchSettingViewController.swift; sourceTree = "<group>"; };
+		0C40450F1F3B18E700808225 /* EVDemoLiveSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoLiveSettingViewController.swift; sourceTree = "<group>"; };
+		0C530F351F14F30800780947 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		0C530F371F14F3E500780947 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		0C530F391F14F41F00780947 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0C64E98C1F19FB6B00C87F3C /* EVScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVScreenManager.h; sourceTree = "<group>"; };
+		0C64E98D1F19FB6B00C87F3C /* EVScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVScreenManager.m; sourceTree = "<group>"; };
+		0C7272FD1F3C513C00220AA8 /* EVProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVProgressView.swift; sourceTree = "<group>"; };
+		0C7272FF1F3C517300220AA8 /* EVDemoWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoWatchViewController.swift; sourceTree = "<group>"; };
+		0C7273011F3C517F00220AA8 /* EVDemoWatchRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoWatchRecordViewController.swift; sourceTree = "<group>"; };
+		0C7273031F3C519D00220AA8 /* EVWatchVRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVWatchVRViewController.swift; sourceTree = "<group>"; };
+		0C866AD41F26E0AE00D1B83B /* EVMediaAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVMediaAuth.h; sourceTree = "<group>"; };
+		0C866AD51F26E0AE00D1B83B /* EVMediaAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVMediaAuth.m; sourceTree = "<group>"; };
+		0C8BF3B91F3BFE810095A0A8 /* EVDemoLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoLiveViewController.swift; sourceTree = "<group>"; };
+		0C9A05801F14E1CA00F9C6E1 /* EVDemoMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoMessageViewController.h; sourceTree = "<group>"; };
+		0C9A05811F14E1CA00F9C6E1 /* EVDemoMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoMessageViewController.m; sourceTree = "<group>"; };
+		0C9A05831F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoWatchRecordViewController.h; sourceTree = "<group>"; };
+		0C9A05841F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoWatchRecordViewController.m; sourceTree = "<group>"; };
+		0C9A05851F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoWatchSettingViewController.h; sourceTree = "<group>"; };
+		0C9A05861F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoWatchSettingViewController.m; sourceTree = "<group>"; };
+		0C9A05871F14E1CA00F9C6E1 /* EVDemoWatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoWatchViewController.h; sourceTree = "<group>"; };
+		0C9A05881F14E1CA00F9C6E1 /* EVDemoWatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoWatchViewController.m; sourceTree = "<group>"; };
+		0C9A058F1F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoLiveSettingViewController.h; sourceTree = "<group>"; };
+		0C9A05901F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoLiveSettingViewController.m; sourceTree = "<group>"; };
+		0C9A05911F14E1CA00F9C6E1 /* EVDemoLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoLiveViewController.h; sourceTree = "<group>"; };
+		0C9A05921F14E1CA00F9C6E1 /* EVDemoLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoLiveViewController.m; sourceTree = "<group>"; };
+		0C9A059B1F14E1DE00F9C6E1 /* CCAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAlertManager.h; sourceTree = "<group>"; };
+		0C9A059C1F14E1DE00F9C6E1 /* CCAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAlertManager.m; sourceTree = "<group>"; };
+		0C9A059D1F14E1DE00F9C6E1 /* EVNetRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVNetRequestManager.h; sourceTree = "<group>"; };
+		0C9A059E1F14E1DE00F9C6E1 /* EVNetRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVNetRequestManager.m; sourceTree = "<group>"; };
+		0C9A05A11F14E23800F9C6E1 /* EVProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVProgressView.h; sourceTree = "<group>"; };
+		0C9A05A21F14E23800F9C6E1 /* EVProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVProgressView.m; sourceTree = "<group>"; };
+		0C9F08161F3C13DA00032D0E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0C9F08191F3C13E500032D0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0C9F081F1F3C364700032D0E /* zebra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zebra.mp3; sourceTree = "<group>"; };
+		0C9F08231F3C3AA200032D0E /* EVConfigBeautyLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVConfigBeautyLevelViewController.swift; sourceTree = "<group>"; };
+		0CA0534B1EFA6A280066F904 /* EVGenerateQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVGenerateQRViewController.h; sourceTree = "<group>"; };
+		0CA0534C1EFA6A280066F904 /* EVGenerateQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVGenerateQRViewController.m; sourceTree = "<group>"; };
+		0CA0534D1EFA6A280066F904 /* EVScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVScanQRViewController.h; sourceTree = "<group>"; };
+		0CA0534E1EFA6A280066F904 /* EVScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVScanQRViewController.m; sourceTree = "<group>"; };
+		0CE3B07D1ECDB71900F29AF3 /* EVSDKDemo_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EVSDKDemo_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE3B07F1ECDB71900F29AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CE3B0841ECDB71900F29AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CE3B0861ECDB71900F29AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CE3B0891ECDB71900F29AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CE3B08B1ECDB71900F29AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE3B09D1ECDBBC800F29AF3 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		0CE3B0A21ECE8F9200F29AF3 /* EVDemoRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVDemoRootViewController.swift; sourceTree = "<group>"; };
+		0CE9B6F71F1E0AB800C3A6C6 /* EVWatchVRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVWatchVRViewController.h; sourceTree = "<group>"; };
+		0CE9B6F81F1E0AB800C3A6C6 /* EVWatchVRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVWatchVRViewController.m; sourceTree = "<group>"; };
+		310547E31DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		310C3E9E1D781907006E6573 /* zebra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zebra.mp3; sourceTree = "<group>"; };
+		310C3EE61D78311B006E6573 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		310FD38F1D586576001DD0A3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		311318631DCB224400A5029D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		311318651DCB226700A5029D /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		31138D441DD5ABBE00378BA0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3146605B1DDDC8210015EB4B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		314660641DDDCA090015EB4B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		31540D561E9F79360019E09E /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		31540D581E9F79530019E09E /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		31540D5A1E9F79690019E09E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		31540D5C1E9F797E0019E09E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		31FFA3AF1D4537200087D0FC /* EVSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EVSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FFA3B31D4537200087D0FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		31FFA3B51D4537200087D0FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		31FFA3B61D4537200087D0FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		31FFA3BC1D4537200087D0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31FFA3BE1D4537200087D0FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31FFA3C11D4537200087D0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31FFA3C31D4537200087D0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31FFA3DA1D4599470087D0FC /* EVDemoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVDemoRootViewController.h; sourceTree = "<group>"; };
+		31FFA3DB1D4599470087D0FC /* EVDemoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVDemoRootViewController.m; sourceTree = "<group>"; };
+		31FFA3E31D45C15A0087D0FC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		31FFA3E51D45C16D0087D0FC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		31FFA3E71D45C1760087D0FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31FFA3E91D45C18C0087D0FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		31FFA3EB1D45C1950087D0FC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		31FFA4211D4A1A680087D0FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		31FFA4231D4A1A9E0087D0FC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		31FFA4251D4A1AB20087D0FC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		31FFA4271D4A1ABB0087D0FC /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		31FFA4291D4A1AC30087D0FC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		31FFA42B1D4A1AD30087D0FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		31FFA42D1D4A1BB60087D0FC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CE3B07A1ECDB71900F29AF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0619891FB2DA3E00CA4090 /* EVVRFramework.framework in Frameworks */,
+				0C9F081E1F3C13FA00032D0E /* AVFoundation.framework in Frameworks */,
+				0C9F081C1F3C13F500032D0E /* AudioToolbox.framework in Frameworks */,
+				0C0619871FB2DA3E00CA4090 /* EVSDKBaseFramework.framework in Frameworks */,
+				0C9F081D1F3C13F500032D0E /* VideoToolbox.framework in Frameworks */,
+				0C06198B1FB2DA3E00CA4090 /* videoprp.framework in Frameworks */,
+				0C9F081B1F3C13EA00032D0E /* Security.framework in Frameworks */,
+				0C0619861FB2DA3E00CA4090 /* EVRTCFramework.framework in Frameworks */,
+				0C0619831FB2DA3E00CA4090 /* AgoraRtcEngineKit.framework in Frameworks */,
+				0C9F081A1F3C13E500032D0E /* QuartzCore.framework in Frameworks */,
+				0C0619851FB2DA3E00CA4090 /* EVMessageFramework.framework in Frameworks */,
+				0C06198A1FB2DA3E00CA4090 /* ios_player_dylib.framework in Frameworks */,
+				0C9F08181F3C13DF00032D0E /* OpenGLES.framework in Frameworks */,
+				0C9F08171F3C13DA00032D0E /* CoreVideo.framework in Frameworks */,
+				0C9F08141F3C13D500032D0E /* CoreMedia.framework in Frameworks */,
+				0C0619841FB2DA3E00CA4090 /* EVMediaFramework.framework in Frameworks */,
+				0C06198E1FB2DA4900CA4090 /* ios_player_dylib.framework in Frameworks */,
+				0C9F08151F3C13D500032D0E /* CoreMotion.framework in Frameworks */,
+				0C9F08131F3C13CE00032D0E /* CoreTelephony.framework in Frameworks */,
+				0C06198C1FB2DA4900CA4090 /* EVSocket.framework in Frameworks */,
+				0C0619881FB2DA3E00CA4090 /* EVSocket.framework in Frameworks */,
+				0C9F08121F3C13C300032D0E /* libz.tbd in Frameworks */,
+				0C9F08111F3C13BF00032D0E /* libc++.tbd in Frameworks */,
+				0C9F08101F3C13BA00032D0E /* libresolv.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FFA3AC1D4537200087D0FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0619751FB2D81800CA4090 /* AgoraRtcEngineKit.framework in Frameworks */,
+				0C0619761FB2D81800CA4090 /* EVMediaFramework.framework in Frameworks */,
+				0C0619771FB2D81800CA4090 /* EVMessageFramework.framework in Frameworks */,
+				0C0619781FB2D81800CA4090 /* EVRTCFramework.framework in Frameworks */,
+				0C06197A1FB2D81800CA4090 /* EVSocket.framework in Frameworks */,
+				0C06197B1FB2D81800CA4090 /* EVVRFramework.framework in Frameworks */,
+				0C06197C1FB2D81800CA4090 /* ios_player_dylib.framework in Frameworks */,
+				0C06197D1FB2D81800CA4090 /* videoprp.framework in Frameworks */,
+				31FFA3E81D45C1760087D0FC /* Foundation.framework in Frameworks */,
+				0C530F381F14F3E500780947 /* libresolv.tbd in Frameworks */,
+				31FFA4241D4A1A9E0087D0FC /* CoreMedia.framework in Frameworks */,
+				3146605D1DDDC8DA0015EB4B /* CoreMotion.framework in Frameworks */,
+				31540D5D1E9F797E0019E09E /* CoreTelephony.framework in Frameworks */,
+				31540D5B1E9F79690019E09E /* GLKit.framework in Frameworks */,
+				31540D591E9F79530019E09E /* libpthread.tbd in Frameworks */,
+				31540D571E9F79360019E09E /* libc++.1.tbd in Frameworks */,
+				31138D451DD5ABBE00378BA0 /* libsqlite3.tbd in Frameworks */,
+				311318641DCB224400A5029D /* UserNotifications.framework in Frameworks */,
+				0C06197F1FB2D9F800CA4090 /* EVSocket.framework in Frameworks */,
+				310547E41DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd in Frameworks */,
+				314660651DDDCA090015EB4B /* libstdc++.tbd in Frameworks */,
+				310FD3911D5869BA001DD0A3 /* CoreFoundation.framework in Frameworks */,
+				31FFA42E1D4A1BB60087D0FC /* libz.tbd in Frameworks */,
+				31FFA42C1D4A1AD30087D0FC /* CoreGraphics.framework in Frameworks */,
+				31FFA42A1D4A1AC30087D0FC /* AudioToolbox.framework in Frameworks */,
+				31FFA4281D4A1ABB0087D0FC /* VideoToolbox.framework in Frameworks */,
+				31FFA4261D4A1AB20087D0FC /* OpenGLES.framework in Frameworks */,
+				31FFA4221D4A1A680087D0FC /* AVFoundation.framework in Frameworks */,
+				31FFA3E61D45C16D0087D0FC /* CFNetwork.framework in Frameworks */,
+				31FFA3EC1D45C1950087D0FC /* libicucore.tbd in Frameworks */,
+				31FFA3EA1D45C18C0087D0FC /* UIKit.framework in Frameworks */,
+				0C06197E1FB2D89900CA4090 /* EVSDKBaseFramework.framework in Frameworks */,
+				0C0619811FB2D9FB00CA4090 /* ios_player_dylib.framework in Frameworks */,
+				31FFA3E41D45C15A0087D0FC /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C06196B1FB2D7D700CA4090 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */,
+				0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */,
+				0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */,
+				0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */,
+				0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */,
+				0C0619711FB2D7D700CA4090 /* EVSocket.framework */,
+				0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */,
+				0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */,
+				0C0619741FB2D7D700CA4090 /* videoprp.framework */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		0C4044F21F3B161200808225 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C4044F31F3B161200808225 /* CCAlertManager.h */,
+				0C4044F41F3B161200808225 /* CCAlertManager.m */,
+				0C4044F51F3B161200808225 /* EVMediaAuth.h */,
+				0C4044F61F3B161200808225 /* EVMediaAuth.m */,
+				0C4044F71F3B161200808225 /* EVNetRequestManager.h */,
+				0C4044F81F3B161200808225 /* EVNetRequestManager.m */,
+				0C4044F91F3B161200808225 /* EVScreenManager.h */,
+				0C4044FA1F3B161200808225 /* EVScreenManager.m */,
+				0C4044FB1F3B161200808225 /* QR */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0C4044FB1F3B161200808225 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				0C4044FC1F3B161200808225 /* EVGenerateQRViewController.h */,
+				0C4044FD1F3B161200808225 /* EVGenerateQRViewController.m */,
+				0C4044FE1F3B161200808225 /* EVScanQRViewController.h */,
+				0C4044FF1F3B161200808225 /* EVScanQRViewController.m */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		0C4045081F3B18A700808225 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0C40450B1F3B18BC00808225 /* EVDemoMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0C4045091F3B18A700808225 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				0C40450D1F3B18D900808225 /* EVDemoWatchSettingViewController.swift */,
+				0C7272FF1F3C517300220AA8 /* EVDemoWatchViewController.swift */,
+				0C7273011F3C517F00220AA8 /* EVDemoWatchRecordViewController.swift */,
+				0C7273031F3C519D00220AA8 /* EVWatchVRViewController.swift */,
+				0C7272FD1F3C513C00220AA8 /* EVProgressView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		0C40450A1F3B18A700808225 /* Streamer */ = {
+			isa = PBXGroup;
+			children = (
+				0C40450F1F3B18E700808225 /* EVDemoLiveSettingViewController.swift */,
+				0C8BF3B91F3BFE810095A0A8 /* EVDemoLiveViewController.swift */,
+				0C9F08231F3C3AA200032D0E /* EVConfigBeautyLevelViewController.swift */,
+			);
+			path = Streamer;
+			sourceTree = "<group>";
+		};
+		0C9A057F1F14E1CA00F9C6E1 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A05801F14E1CA00F9C6E1 /* EVDemoMessageViewController.h */,
+				0C9A05811F14E1CA00F9C6E1 /* EVDemoMessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0C9A05821F14E1CA00F9C6E1 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				0CE9B6F61F1E0AA600C3A6C6 /* VR */,
+				0C9A05851F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.h */,
+				0C9A05861F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.m */,
+				0C9A05871F14E1CA00F9C6E1 /* EVDemoWatchViewController.h */,
+				0C9A05881F14E1CA00F9C6E1 /* EVDemoWatchViewController.m */,
+				0C9A05831F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.h */,
+				0C9A05841F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.m */,
+				0C9A05A11F14E23800F9C6E1 /* EVProgressView.h */,
+				0C9A05A21F14E23800F9C6E1 /* EVProgressView.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		0C9A058E1F14E1CA00F9C6E1 /* Streamer */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A058F1F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.h */,
+				0C9A05901F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.m */,
+				0C9A05911F14E1CA00F9C6E1 /* EVDemoLiveViewController.h */,
+				0C9A05921F14E1CA00F9C6E1 /* EVDemoLiveViewController.m */,
+				0C0BA83D1F271FCD00D0940B /* EVConfigBeautyLevelViewController.h */,
+				0C0BA83E1F271FCD00D0940B /* EVConfigBeautyLevelViewController.m */,
+			);
+			path = Streamer;
+			sourceTree = "<group>";
+		};
+		0CA053491EFA6A280066F904 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A059B1F14E1DE00F9C6E1 /* CCAlertManager.h */,
+				0C9A059C1F14E1DE00F9C6E1 /* CCAlertManager.m */,
+				0C9A059D1F14E1DE00F9C6E1 /* EVNetRequestManager.h */,
+				0C9A059E1F14E1DE00F9C6E1 /* EVNetRequestManager.m */,
+				0C64E98C1F19FB6B00C87F3C /* EVScreenManager.h */,
+				0C64E98D1F19FB6B00C87F3C /* EVScreenManager.m */,
+				0C866AD41F26E0AE00D1B83B /* EVMediaAuth.h */,
+				0C866AD51F26E0AE00D1B83B /* EVMediaAuth.m */,
+				0CA0534A1EFA6A280066F904 /* QR */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0CA0534A1EFA6A280066F904 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				0CA0534B1EFA6A280066F904 /* EVGenerateQRViewController.h */,
+				0CA0534C1EFA6A280066F904 /* EVGenerateQRViewController.m */,
+				0CA0534D1EFA6A280066F904 /* EVScanQRViewController.h */,
+				0CA0534E1EFA6A280066F904 /* EVScanQRViewController.m */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		0CE3B07E1ECDB71900F29AF3 /* EVSDKDemo_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				0CE3B07F1ECDB71900F29AF3 /* AppDelegate.swift */,
+				0CE3B0A21ECE8F9200F29AF3 /* EVDemoRootViewController.swift */,
+				0C4045081F3B18A700808225 /* Message */,
+				0C4045091F3B18A700808225 /* Player */,
+				0C40450A1F3B18A700808225 /* Streamer */,
+				0C4044F21F3B161200808225 /* Utils */,
+				0CE3B0831ECDB71900F29AF3 /* Main.storyboard */,
+				0CE3B0861ECDB71900F29AF3 /* Assets.xcassets */,
+				0CE3B0881ECDB71900F29AF3 /* LaunchScreen.storyboard */,
+				0CE3B08B1ECDB71900F29AF3 /* Info.plist */,
+				0C9F081F1F3C364700032D0E /* zebra.mp3 */,
+				0CE3B09D1ECDBBC800F29AF3 /* Bridging-Header.h */,
+			);
+			path = EVSDKDemo_Swift;
+			sourceTree = "<group>";
+		};
+		0CE9B6F61F1E0AA600C3A6C6 /* VR */ = {
+			isa = PBXGroup;
+			children = (
+				0CE9B6F71F1E0AB800C3A6C6 /* EVWatchVRViewController.h */,
+				0CE9B6F81F1E0AB800C3A6C6 /* EVWatchVRViewController.m */,
+			);
+			path = VR;
+			sourceTree = "<group>";
+		};
+		3116D6271D60AF3E005FEE5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C9F08191F3C13E500032D0E /* QuartzCore.framework */,
+				0C9F08161F3C13DA00032D0E /* CoreVideo.framework */,
+				0C530F371F14F3E500780947 /* libresolv.tbd */,
+				0C530F351F14F30800780947 /* libresolv.9.tbd */,
+				0C530F391F14F41F00780947 /* libc++.tbd */,
+				31540D5C1E9F797E0019E09E /* CoreTelephony.framework */,
+				31540D5A1E9F79690019E09E /* GLKit.framework */,
+				31540D581E9F79530019E09E /* libpthread.tbd */,
+				31540D561E9F79360019E09E /* libc++.1.tbd */,
+				31138D441DD5ABBE00378BA0 /* libsqlite3.tbd */,
+				311318651DCB226700A5029D /* UserNotificationsUI.framework */,
+				311318631DCB224400A5029D /* UserNotifications.framework */,
+				310547E31DE2D6D400FA0A27 /* libstdc++.6.0.9.tbd */,
+				314660641DDDCA090015EB4B /* libstdc++.tbd */,
+				3146605B1DDDC8210015EB4B /* CoreMotion.framework */,
+				310C3EE61D78311B006E6573 /* libstdc++.6.tbd */,
+				310FD38F1D586576001DD0A3 /* CoreFoundation.framework */,
+				31FFA42D1D4A1BB60087D0FC /* libz.tbd */,
+				31FFA42B1D4A1AD30087D0FC /* CoreGraphics.framework */,
+				31FFA4291D4A1AC30087D0FC /* AudioToolbox.framework */,
+				31FFA4271D4A1ABB0087D0FC /* VideoToolbox.framework */,
+				31FFA4251D4A1AB20087D0FC /* OpenGLES.framework */,
+				31FFA4231D4A1A9E0087D0FC /* CoreMedia.framework */,
+				31FFA4211D4A1A680087D0FC /* AVFoundation.framework */,
+				31FFA3EB1D45C1950087D0FC /* libicucore.tbd */,
+				31FFA3E91D45C18C0087D0FC /* UIKit.framework */,
+				31FFA3E71D45C1760087D0FC /* Foundation.framework */,
+				31FFA3E51D45C16D0087D0FC /* CFNetwork.framework */,
+				31FFA3E31D45C15A0087D0FC /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31FFA3A61D4537200087D0FC = {
+			isa = PBXGroup;
+			children = (
+				31FFA3B11D4537200087D0FC /* EVSDKDemo */,
+				0CE3B07E1ECDB71900F29AF3 /* EVSDKDemo_Swift */,
+				3116D6271D60AF3E005FEE5A /* Frameworks */,
+				31FFA3B01D4537200087D0FC /* Products */,
+				0C06196B1FB2D7D700CA4090 /* Libs */,
+			);
+			sourceTree = "<group>";
+		};
+		31FFA3B01D4537200087D0FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FFA3AF1D4537200087D0FC /* EVSDKDemo.app */,
+				0CE3B07D1ECDB71900F29AF3 /* EVSDKDemo_Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31FFA3B11D4537200087D0FC /* EVSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				31FFA3B51D4537200087D0FC /* AppDelegate.h */,
+				31FFA3B61D4537200087D0FC /* AppDelegate.m */,
+				31FFA3DA1D4599470087D0FC /* EVDemoRootViewController.h */,
+				31FFA3DB1D4599470087D0FC /* EVDemoRootViewController.m */,
+				0C9A057F1F14E1CA00F9C6E1 /* Message */,
+				0C9A05821F14E1CA00F9C6E1 /* Player */,
+				0C9A058E1F14E1CA00F9C6E1 /* Streamer */,
+				0CA053491EFA6A280066F904 /* Utils */,
+				31FFA3BB1D4537200087D0FC /* Main.storyboard */,
+				31FFA3BE1D4537200087D0FC /* Assets.xcassets */,
+				31FFA3C01D4537200087D0FC /* LaunchScreen.storyboard */,
+				31FFA3C31D4537200087D0FC /* Info.plist */,
+				310C3E9E1D781907006E6573 /* zebra.mp3 */,
+				31FFA3B21D4537200087D0FC /* Supporting Files */,
+			);
+			path = EVSDKDemo;
+			sourceTree = "<group>";
+		};
+		31FFA3B21D4537200087D0FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31FFA3B31D4537200087D0FC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CE3B07C1ECDB71900F29AF3 /* EVSDKDemo_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE3B0971ECDB71900F29AF3 /* Build configuration list for PBXNativeTarget "EVSDKDemo_Swift" */;
+			buildPhases = (
+				0CE3B0791ECDB71900F29AF3 /* Sources */,
+				0CE3B07A1ECDB71900F29AF3 /* Frameworks */,
+				0CE3B07B1ECDB71900F29AF3 /* Resources */,
+				0CA19B4D1EF3F44800D929C4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EVSDKDemo_Swift;
+			productName = EVSDKDemo_Swift;
+			productReference = 0CE3B07D1ECDB71900F29AF3 /* EVSDKDemo_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31FFA3AE1D4537200087D0FC /* EVSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FFA3C61D4537200087D0FC /* Build configuration list for PBXNativeTarget "EVSDKDemo" */;
+			buildPhases = (
+				31FFA3AB1D4537200087D0FC /* Sources */,
+				31FFA3AC1D4537200087D0FC /* Frameworks */,
+				31FFA3AD1D4537200087D0FC /* Resources */,
+				0C676EA91F1F4CCB0040A0A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EVSDKDemo;
+			productName = EVSDKDemo;
+			productReference = 31FFA3AF1D4537200087D0FC /* EVSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31FFA3A71D4537200087D0FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = cloudfocous;
+				TargetAttributes = {
+					0CE3B07C1ECDB71900F29AF3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PWD8THY2VS;
+						ProvisioningStyle = Automatic;
+					};
+					31FFA3AE1D4537200087D0FC = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PWD8THY2VS;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 31FFA3AA1D4537200087D0FC /* Build configuration list for PBXProject "EVSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31FFA3A61D4537200087D0FC;
+			productRefGroup = 31FFA3B01D4537200087D0FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31FFA3AE1D4537200087D0FC /* EVSDKDemo */,
+				0CE3B07C1ECDB71900F29AF3 /* EVSDKDemo_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CE3B07B1ECDB71900F29AF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9AA6451ECEA48E00F16FFE /* Main.storyboard in Resources */,
+				0CE3B08A1ECDB71900F29AF3 /* LaunchScreen.storyboard in Resources */,
+				0CE3B0871ECDB71900F29AF3 /* Assets.xcassets in Resources */,
+				0C9F08201F3C364700032D0E /* zebra.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FFA3AD1D4537200087D0FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFA3C21D4537200087D0FC /* LaunchScreen.storyboard in Resources */,
+				31FFA3BF1D4537200087D0FC /* Assets.xcassets in Resources */,
+				31FFA3BD1D4537200087D0FC /* Main.storyboard in Resources */,
+				310C3E9F1D781907006E6573 /* zebra.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE3B0791ECDB71900F29AF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7272FE1F3C513C00220AA8 /* EVProgressView.swift in Sources */,
+				0C4045001F3B161200808225 /* CCAlertManager.m in Sources */,
+				0C4045101F3B18E700808225 /* EVDemoLiveSettingViewController.swift in Sources */,
+				0C4045011F3B161200808225 /* EVMediaAuth.m in Sources */,
+				0CE3B0A31ECE8F9200F29AF3 /* EVDemoRootViewController.swift in Sources */,
+				0C7273021F3C517F00220AA8 /* EVDemoWatchRecordViewController.swift in Sources */,
+				0C4045021F3B161200808225 /* EVNetRequestManager.m in Sources */,
+				0C4045031F3B161200808225 /* EVScreenManager.m in Sources */,
+				0C4045051F3B161200808225 /* EVScanQRViewController.m in Sources */,
+				0C7273041F3C519D00220AA8 /* EVWatchVRViewController.swift in Sources */,
+				0C9F08241F3C3AA200032D0E /* EVConfigBeautyLevelViewController.swift in Sources */,
+				0C4045041F3B161200808225 /* EVGenerateQRViewController.m in Sources */,
+				0C8BF3BA1F3BFE810095A0A8 /* EVDemoLiveViewController.swift in Sources */,
+				0C40450C1F3B18BC00808225 /* EVDemoMessageViewController.swift in Sources */,
+				0C7273001F3C517300220AA8 /* EVDemoWatchViewController.swift in Sources */,
+				0CE3B0801ECDB71900F29AF3 /* AppDelegate.swift in Sources */,
+				0C40450E1F3B18D900808225 /* EVDemoWatchSettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FFA3AB1D4537200087D0FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9A059A1F14E1CA00F9C6E1 /* EVDemoLiveViewController.m in Sources */,
+				0C9A05A01F14E1DE00F9C6E1 /* EVNetRequestManager.m in Sources */,
+				0C866AD61F26E0AE00D1B83B /* EVMediaAuth.m in Sources */,
+				0C9A059F1F14E1DE00F9C6E1 /* CCAlertManager.m in Sources */,
+				31FFA3B71D4537200087D0FC /* AppDelegate.m in Sources */,
+				0C9A05A31F14E23800F9C6E1 /* EVProgressView.m in Sources */,
+				31FFA3DC1D4599470087D0FC /* EVDemoRootViewController.m in Sources */,
+				0C64E98E1F19FB6B00C87F3C /* EVScreenManager.m in Sources */,
+				0CE9B6F91F1E0AB800C3A6C6 /* EVWatchVRViewController.m in Sources */,
+				0C9A05961F14E1CA00F9C6E1 /* EVDemoWatchViewController.m in Sources */,
+				0CA053501EFA6A280066F904 /* EVScanQRViewController.m in Sources */,
+				0C9A05991F14E1CA00F9C6E1 /* EVDemoLiveSettingViewController.m in Sources */,
+				0C9A05931F14E1CA00F9C6E1 /* EVDemoMessageViewController.m in Sources */,
+				0CA0534F1EFA6A280066F904 /* EVGenerateQRViewController.m in Sources */,
+				0C0BA83F1F271FCD00D0940B /* EVConfigBeautyLevelViewController.m in Sources */,
+				0C9A05951F14E1CA00F9C6E1 /* EVDemoWatchSettingViewController.m in Sources */,
+				0C9A05941F14E1CA00F9C6E1 /* EVDemoWatchRecordViewController.m in Sources */,
+				31FFA3B41D4537200087D0FC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0CE3B0831ECDB71900F29AF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE3B0841ECDB71900F29AF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0CE3B0881ECDB71900F29AF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CE3B0891ECDB71900F29AF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		31FFA3BB1D4537200087D0FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FFA3BC1D4537200087D0FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31FFA3C01D4537200087D0FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FFA3C11D4537200087D0FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CE3B0981ECDB71900F29AF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = PWD8THY2VS;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../EVMedia/KSY/Dependence/Agora",
+					"\"$(SRCROOT)/../EVVR/DeTuLibs\"",
+					"$(PROJECT_DIR)/../EVMessage",
+					"$(PROJECT_DIR)/Libs",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = EVSDKDemo_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.easyvaas.EVSDKDemo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EVSDKDemo_Swift/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0CE3B0991ECDB71900F29AF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = PWD8THY2VS;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../EVMedia/KSY/Dependence/Agora",
+					"\"$(SRCROOT)/../EVVR/DeTuLibs\"",
+					"$(PROJECT_DIR)/../EVMessage",
+					"$(PROJECT_DIR)/Libs",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = EVSDKDemo_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.easyvaas.EVSDKDemo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EVSDKDemo_Swift/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		31FFA3C41D4537200087D0FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		31FFA3C51D4537200087D0FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31FFA3C71D4537200087D0FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianwen Chen (N7DCS5PGEW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PWD8THY2VS;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libs",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = EVSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.sdk.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "be69bb83-fe9f-4446-b4cb-3fed85fbcee0";
+				PROVISIONING_PROFILE_SPECIFIER = EVSDKDemo_dev_20170717;
+			};
+			name = Debug;
+		};
+		31FFA3C81D4537200087D0FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianwen Chen (N7DCS5PGEW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = PWD8THY2VS;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libs",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = EVSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-fprofile-instr-generate",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyvaas.sdk.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1a242eeb-6064-4773-8cbd-5a980fd3b9ff";
+				PROVISIONING_PROFILE_SPECIFIER = EVSDKDemo_adhoc_20170717;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CE3B0971ECDB71900F29AF3 /* Build configuration list for PBXNativeTarget "EVSDKDemo_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CE3B0981ECDB71900F29AF3 /* Debug */,
+				0CE3B0991ECDB71900F29AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FFA3AA1D4537200087D0FC /* Build configuration list for PBXProject "EVSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FFA3C41D4537200087D0FC /* Debug */,
+				31FFA3C51D4537200087D0FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FFA3C61D4537200087D0FC /* Build configuration list for PBXNativeTarget "EVSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FFA3C71D4537200087D0FC /* Debug */,
+				31FFA3C81D4537200087D0FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31FFA3A71D4537200087D0FC /* Project object */;
+}

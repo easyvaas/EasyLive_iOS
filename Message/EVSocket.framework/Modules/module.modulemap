@@ -1,3 +1,0 @@
-framework module EVSocket {
-    header "EVSocket-Swift.h"
-}

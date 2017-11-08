@@ -1,0 +1,4 @@
+framework module EVSocket {
+    header "EVSocket-Swift.h"
+    requires objc
+}

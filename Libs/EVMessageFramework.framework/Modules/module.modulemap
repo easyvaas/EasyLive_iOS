@@ -1,0 +1,6 @@
+framework module EVMessageFramework {
+  umbrella header "EVMessageFramework.h"
+
+  export *
+  module * { export * }
+}
