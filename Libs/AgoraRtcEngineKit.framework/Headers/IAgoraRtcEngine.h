@@ -72,10 +72,13 @@ public:
         ptr_ = ptr;
     }
     template<class C1, class C2>
-    void queryInterface(C1& c, C2 iid) {
-		pointer_type p;
-        if (!c.queryInterface(iid, (void**)&p))
-			reset(p);
+    bool queryInterface(C1* c, C2 iid) {
+        pointer_type p = NULL;
+        if (c && !c->queryInterface(iid, (void**)&p))
+        {
+            reset(p);
+        }
+        return p != NULL;;
 	}
 private:
     AutoPtr(const AutoPtr&);
@@ -117,19 +120,22 @@ enum WARN_CODE_TYPE
     WARN_OPEN_CHANNEL_TIMEOUT = 106,
     WARN_OPEN_CHANNEL_REJECTED = 107,
 
+    // sdk: 100~1000
+    WARN_SWITCH_LIVE_VIDEO_TIMEOUT = 111,
+    WARN_SET_CLIENT_ROLE_TIMEOUT = 118,
     WARN_AUDIO_MIXING_OPEN_ERROR = 701,
+
     WARN_ADM_RUNTIME_PLAYOUT_WARNING = 1014,
     WARN_ADM_RUNTIME_RECORDING_WARNING = 1016,
     WARN_ADM_RECORD_AUDIO_SILENCE = 1019,
     WARN_ADM_PLAYOUT_MALFUNCTION = 1020,
     WARN_ADM_RECORD_MALFUNCTION = 1021,
+    WARN_ADM_WIN_CORE_NO_RECORDING_DEVICE = 1322,
+    WARN_ADM_WIN_CORE_NO_PLAYOUT_DEVICE = 1323,
+    WARN_ADM_WIN_CORE_IMPROPER_CAPTURE_RELEASE = 1324,
     WARN_ADM_RECORD_AUDIO_LOWLEVEL = 1031,
+    WARN_ADM_WINDOWS_NO_DATA_READY_EVENT = 1040,
     WARN_APM_HOWLING = 1051,
-
-    // sdk: 100~1000
-    WARN_SWITCH_LIVE_VIDEO_TIMEOUT = 111,
-	WARN_SET_CLIENT_ROLE_TIMEOUT = 118,
-    WARN_SET_CLIENT_ROLE_NOT_AUTHORIZED = 119,
 };
 
 enum ERROR_CODE_TYPE
@@ -168,6 +174,7 @@ enum ERROR_CODE_TYPE
 	ERR_BITRATE_LIMIT = 115,
 	ERR_TOO_MANY_DATA_STREAMS = 116,
 	ERR_STREAM_MESSAGE_TIMEOUT = 117,
+    ERR_SET_CLIENT_ROLE_NOT_AUTHORIZED = 119,
 
     //1001~2000
     ERR_LOAD_MEDIA_ENGINE = 1001,
@@ -186,11 +193,13 @@ enum ERROR_CODE_TYPE
     ERR_ADM_RUNTIME_PLAYOUT_ERROR = 1015,
     ERR_ADM_RUNTIME_RECORDING_ERROR = 1017,
     ERR_ADM_RECORD_AUDIO_FAILED = 1018,
-    ERR_ADM_INIT_LOOPBACK  = 1022,
-    ERR_ADM_START_LOOPBACK  = 1023,
+    ERR_ADM_INIT_LOOPBACK = 1022,
+    ERR_ADM_START_LOOPBACK = 1023,
+    ERR_ADM_NO_PERMISSION = 1027,
     // 1025, as warning for interruption of adm on ios
     // 1026, as warning for route change of adm on ios
-  
+    ERR_ADM_ANDROID_JNI_JAVA_RECORD_ERROR = 1115,
+
     // VDM error code starts from 1500
     ERR_VDM_CAMERA_NOT_AUTHORIZED  = 1501,
 
@@ -230,7 +239,6 @@ enum MEDIA_ENGINE_EVENT_CODE_TYPE
     MEDIA_ENGINE_RECORDING_WARNING = 2,
     MEDIA_ENGINE_PLAYOUT_WARNING = 3,
     MEDIA_ENGINE_AUDIO_FILE_MIX_FINISH = 10,
-    MEDIA_ENGINE_AUDIO_SAMPLE_RATE_RECONFIG_FINISH = 11,
     // media engine role changed
     MEDIA_ENGINE_ROLE_BROADCASTER_SOLO = 20,
     MEDIA_ENGINE_ROLE_BROADCASTER_INTERACTIVE = 21,
@@ -238,7 +246,10 @@ enum MEDIA_ENGINE_EVENT_CODE_TYPE
     MEDIA_ENGINE_ROLE_COMM_PEER = 23,
     MEDIA_ENGINE_ROLE_GAME_PEER = 24,
     // iOS adm sample rate changed
-    MEDIA_ENGINE_AUDIO_ADM_REQUIRE_RESTART = 110
+    MEDIA_ENGINE_AUDIO_ADM_REQUIRE_RESTART = 110,
+    MEDIA_ENGINE_AUDIO_ADM_SPECIAL_RESTART = 111,
+    // iOS keep AVAudioSession settings
+    MEDIA_ENGINE_AUDIO_KEEP_SESSION_CONFIG = 120
 };
 
 enum MEDIA_DEVICE_STATE_TYPE
@@ -258,6 +269,13 @@ enum MEDIA_DEVICE_TYPE
     VIDEO_CAPTURE_DEVICE = 3,
 };
 
+enum AUDIO_RECORDING_QUALITY_TYPE
+{
+    AUDIO_RECORDING_QUALITY_LOW = 0,
+    AUDIO_RECORDING_QUALITY_MEDIUM = 1,
+    AUDIO_RECORDING_QUALITY_HIGH = 2,
+};
+
 enum QUALITY_TYPE
 {
     QUALITY_UNKNOWN = 0,
@@ -274,6 +292,13 @@ enum RENDER_MODE_TYPE
     RENDER_MODE_HIDDEN = 1,
     RENDER_MODE_FIT = 2,
     RENDER_MODE_ADAPTIVE = 3,
+};
+
+enum VIDEO_MIRROR_MODE_TYPE
+{
+    VIDEO_MIRROR_MODE_AUTO = 0,//determined by SDK
+    VIDEO_MIRROR_MODE_ENABLED = 1,//enabled mirror
+    VIDEO_MIRROR_MODE_DISABLED = 2,//disable mirror
 };
 
 enum VIDEO_PROFILE_TYPE
@@ -314,6 +339,27 @@ enum VIDEO_PROFILE_TYPE
     VIDEO_PROFILE_4K = 70,          // 3840x2160 30   8910
     VIDEO_PROFILE_4K_3 = 72,        // 3840x2160 60   13500
     VIDEO_PROFILE_DEFAULT = VIDEO_PROFILE_360P,
+};
+
+enum AUDIO_PROFILE_TYPE // sample rate, bit rate, mono/stereo, speech/music codec
+{
+    AUDIO_PROFILE_DEFAULT = 0, // use default settings
+    AUDIO_PROFILE_SPEECH_STANDARD = 1, // 32Khz, 18kbps, mono, speech
+    AUDIO_PROFILE_MUSIC_STANDARD = 2, // 48Khz, 50kbps, mono, music
+    AUDIO_PROFILE_MUSIC_STANDARD_STEREO = 3, // 48Khz, 50kbps, stereo, music
+    AUDIO_PROFILE_MUSIC_HIGH_QUALITY = 4, // 48Khz, 128kbps, mono, music
+    AUDIO_PROFILE_MUSIC_HIGH_QUALITY_STEREO = 5, // 48Khz, 128kbps, stereo, music
+    AUDIO_PROFILE_NUM = 6,
+};
+
+enum AUDIO_SCENARIO_TYPE // set a suitable scenario for your app type
+{
+    AUDIO_SCENARIO_DEFAULT = 0,
+    AUDIO_SCENARIO_CHATROOM = 1,
+    AUDIO_SCENARIO_EDUCATION = 2,
+    AUDIO_SCENARIO_GAME_STREAMING = 3,
+    AUDIO_SCENARIO_SHOWROOM = 4,
+    AUDIO_SCENARIO_NUM = 5,
 };
 
 enum CHANNEL_PROFILE_TYPE
@@ -435,6 +481,16 @@ struct VideoCompositingLayout
     {}
 };
 
+typedef struct Rect {
+    int top;
+    int left;
+    int bottom;
+    int right;
+
+    Rect(): top(0), left(0), bottom(0), right(0) {}
+    Rect(int t, int l, int b, int r): top(t), left(l), bottom(b), right(r) {}
+} Rect;
+
 #if defined(_WIN32)
 
 enum RTMP_STREAM_LIFE_CYCLE_TYPE
@@ -451,9 +507,13 @@ struct PublisherConfiguration {
 	int defaultLayout;
 	int lifecycle;
 	bool owner;
+	int injectStreamWidth;
+	int injectStreamHeight;
+	const char* injectStreamUrl;
 	const char* publishUrl;
 	const char* rawStreamUrl;
 	const char* extraInfo;
+
 
 	PublisherConfiguration()
 		: width(640)
@@ -463,6 +523,9 @@ struct PublisherConfiguration {
 		, defaultLayout(1)
 		, lifecycle(RTMP_STREAM_LIFE_CYCLE_BIND2CHANNEL)
 		, owner(true)
+		, injectStreamWidth(0)
+		, injectStreamHeight(0)
+		, injectStreamUrl(NULL)
 		, publishUrl(NULL)
 		, rawStreamUrl(NULL)
 		, extraInfo(NULL)
@@ -671,6 +734,12 @@ public:
      * When audio mixing file playback finished, this function will be called
      */
     virtual void onAudioMixingFinished() {
+    }
+
+    /**
+    * When audio effect playback finished, this function will be called
+    */
+    virtual void onAudioEffectFinished(int soundId) {
     }
 
     /**
@@ -957,7 +1026,18 @@ public:
         (void)uid;
         (void)elapsed;
     }
+    /** @param [in] uid
+    *        the speaker uid who is talking in the channel
+    */
+    virtual void onActiveSpeaker(uid_t uid) {
+        (void)uid;
+    }
 
+    /**
+    * when client role is successfully changed, the function will be called
+    */
+    virtual void onClientRoleChanged(CLIENT_ROLE_TYPE oldRole, CLIENT_ROLE_TYPE newRole) {
+    }
 };
 
 /**
@@ -1356,6 +1436,8 @@ public:
     */
     virtual int disableAudio() = 0;
 
+    virtual int setAudioProfile(AUDIO_PROFILE_TYPE profile, AUDIO_SCENARIO_TYPE scenario) = 0;
+
     /**
     * get self call id in the current channel
     * @param [in, out] callId
@@ -1566,7 +1648,7 @@ public:
 class AAudioDeviceManager : public agora::util::AutoPtr<IAudioDeviceManager>
 {
 public:
-    AAudioDeviceManager(IRtcEngine& engine)
+    AAudioDeviceManager(IRtcEngine* engine)
     {
 		queryInterface(engine, AGORA_IID_AUDIO_DEVICE_MANAGER);
     }
@@ -1575,7 +1657,7 @@ public:
 class AVideoDeviceManager : public agora::util::AutoPtr<IVideoDeviceManager>
 {
 public:
-    AVideoDeviceManager(IRtcEngine& engine)
+    AVideoDeviceManager(IRtcEngine* engine)
     {
 		queryInterface(engine, AGORA_IID_VIDEO_DEVICE_MANAGER);
     }
@@ -1584,21 +1666,25 @@ public:
 class AParameter : public agora::util::AutoPtr<IRtcEngineParameter>
 {
 public:
-    AParameter(IRtcEngine& engine)
+    AParameter(IRtcEngine& engine) { initialize(&engine); }
+    AParameter(IRtcEngine* engine) { initialize(engine); }
+    AParameter(IRtcEngineParameter* p) :agora::util::AutoPtr<IRtcEngineParameter>(p) {}
+private:
+    bool initialize(IRtcEngine* engine)
     {
-        IRtcEngineParameter* p;
-        if (!engine.queryInterface(AGORA_IID_RTC_ENGINE_PARAMETER, (void**)&p))
+        IRtcEngineParameter* p = NULL;
+        if (engine && !engine->queryInterface(AGORA_IID_RTC_ENGINE_PARAMETER, (void**)&p))
             reset(p);
+        return p != NULL;
     }
-    AParameter(IRtcEngineParameter* p)
-        :agora::util::AutoPtr<IRtcEngineParameter>(p)
-    {}
 };
 
 class RtcEngineParameters
 {
 public:
     RtcEngineParameters(IRtcEngine& engine)
+        :m_parameter(&engine){}
+    RtcEngineParameters(IRtcEngine* engine)
         :m_parameter(engine){}
 
     /**
@@ -1710,16 +1796,16 @@ public:
     *        the .wav file path you want to saved
     * @return return 0 if success or an error code
     */
-    int startAudioRecording(const char* filePath) {
+    int startAudioRecording(const char* filePath, AUDIO_RECORDING_QUALITY_TYPE quality) {
         if (!m_parameter) return -ERR_NOT_INITIALIZED;
 #if defined(_WIN32)
-		util::AString path;
-		if (!m_parameter->convertPath(filePath, path))
-			filePath = path->c_str();
-		else
-			return -ERR_INVALID_ARGUMENT;
+        util::AString path;
+        if (!m_parameter->convertPath(filePath, path))
+            filePath = path->c_str();
+        else
+            return -ERR_INVALID_ARGUMENT;
 #endif
-		return m_parameter->setString("che.audio.start_recording", filePath);
+        return setObject("che.audio.start_recording", "{\"filePath\":\"%s\",\"quality\":%d}", filePath, quality);
     }
 
     /**
@@ -1798,51 +1884,118 @@ public:
     int setAudioMixingPosition(int pos /*in ms*/) {
         return m_parameter ? m_parameter->setInt("che.audio.mixing.file.position", pos) : -ERR_NOT_INITIALIZED;
     }
-#if defined(__APPLE__)
-	/**
-	* start screen capture
-	* @return return 0 if success or an error code
-	*/
-	int startScreenCapture(unsigned int windowId) {
-        return m_parameter ? m_parameter->setUInt("che.video.start_screen_capture", windowId) : -ERR_NOT_INITIALIZED;
-	}
-
     /**
-     * specify window id to capture
+     * Change the pitch of local speaker's voice
+     * @param [in] pitch
+     *        frequency, in the range of [0.5..2.0], default value is 1.0
+     *
      * @return return 0 if success or an error code
      */
-    int setScreenCaptureWindow(unsigned int windowId) {
-        return m_parameter ? m_parameter->setUInt("che.video.set_screen_capture_window", windowId) : -ERR_NOT_INITIALIZED;
+    int setLocalVoicePitch(double pitch) {
+        return m_parameter ? m_parameter->setInt(
+            "che.audio.game_local_pitch_shift",
+            static_cast<int>(pitch * 100)) : -ERR_NOT_INITIALIZED;
     }
+    /**
+     * Set the audio ears back's volume and effect
+     * @param [in] volume
+     *        set volume of audio ears back, in the range of [0..100], default value is 100
+     *
+     * @return return 0 if success or an error code
+     */
+    int setInEarMonitoringVolume(int volume) {
+        return m_parameter ? m_parameter->setInt("che.audio.headset.monitoring.parameter", volume) : -ERR_NOT_INITIALIZED;
+    }
+    /**
+     *  set audio profile and scenario
+     *  including sample rate, bit rate, mono/stereo, speech/music codec
+     *
+     *  @param [in] profile
+     *              enumeration definition about the audio's samplerate, bitrate, mono/stereo, speech/music codec
+     *  @param [in] scenario
+     *              enumeration definition about the audio scenario
+     *
+     *  @return 0 when executed successfully. return negative value if failed.
+     */
+    int setAudioProfile(AUDIO_PROFILE_TYPE profile, AUDIO_SCENARIO_TYPE scenario) {
+        return setObject(
+            "che.audio.profile",
+            "{\"config\":%d,\"scenario\":%d}",
+            static_cast<int>(profile), static_cast<int>(scenario));
+    }
+#if defined(__APPLE__)
+    /**
+     * start screen/windows capture
+     *
+     *  @param windowId screen capture, if windowId is 0; windows capture if windowsId isn't 0;
+     *  @param rect     valid when windowId is 0; whole screen if rect is NULL.
+     *
+     *  @return return 0 if success or an error code
+     */
+    int startScreenCapture(unsigned int windowId, int captureFreq, const Rect *rect) {
+        if (!rect)
+            return setObject("che.video.start_screen_capture", "{\"id\":%u,\"captureFreq\":%d}", windowId, captureFreq);
+        else
+            return setObject("che.video.start_screen_capture", "{\"id\":%u,\"captureFreq\":%d,\"top\":%d,\"left\":%d,\"bottom\":%d,\"right\":%d}", windowId, captureFreq, rect->top, rect->left, rect->bottom, rect->right);
+    }
+
     /**
      * stop screen capture
      * @return return 0 if success or an error code
      */
     int stopScreenCapture() {
         return m_parameter ? m_parameter->setBool("che.video.stop_screen_capture", true) : -ERR_NOT_INITIALIZED;
+    }
+
+    /**
+    * update screen capture region
+    *
+    *  @param rect     valid when windowId is 0; whole screen if rect is NULL.
+    *
+    *  @return return 0 if success or an error code
+    */
+    int updateScreenCaptureRegion(const Rect *rect) {
+      if (!rect)
+        return setObject("che.video.update_screen_capture_region", "{}");
+      else
+        return setObject("che.video.update_screen_capture_region", "{\"top\":%d,\"left\":%d,\"bottom\":%d,\"right\":%d}", rect->top, rect->left, rect->bottom, rect->right);
     }
 #elif defined(_WIN32)
     /**
-     * start screen capture
-     * @return return 0 if success or an error code
+     * start screen/windows capture
+     *
+     *  @param windowId screen capture, if windowId is 0; windows capture if windowsId isn't 0;
+     *  @param rect     valid when windowId is 0; whole screen if rect is NULL.
+     *
+     *  @return return 0 if success or an error code
      */
-    int startScreenCapture(HWND windowId) {
-        return m_parameter ? m_parameter->setUInt("che.video.start_screen_capture", (unsigned int)windowId) : -ERR_NOT_INITIALIZED;
+    int startScreenCapture(HWND windowId, int captureFreq, const Rect *rect) {
+        if (!rect)
+            return setObject("che.video.start_screen_capture", "{\"id\":%u,\"captureFreq\":%d}", (unsigned int)windowId, captureFreq);
+        else
+            return setObject("che.video.start_screen_capture", "{\"id\":%u,\"captureFreq\":%d,\"top\":%d,\"left\":%d,\"bottom\":%d,\"right\":%d}", (unsigned int)windowId, captureFreq, rect->top, rect->left, rect->bottom, rect->right);
     }
-    
-    /**
-     * specify window id to capture
-     * @return return 0 if success or an error code
-     */
-    int setScreenCaptureWindow(HWND windowId) {
-        return m_parameter ? m_parameter->setUInt("che.video.set_screen_capture_window", (unsigned int)windowId) : -ERR_NOT_INITIALIZED;
-    }
+
     /**
      * stop screen capture
      * @return return 0 if success or an error code
      */
     int stopScreenCapture() {
         return m_parameter ? m_parameter->setBool("che.video.stop_screen_capture", true) : -ERR_NOT_INITIALIZED;
+    }
+
+    /**
+    * update screen capture region
+    *
+    *  @param rect     valid when windowId is 0; whole screen if rect is NULL.
+    *
+    *  @return return 0 if success or an error code
+    */
+    int updateScreenCaptureRegion(const Rect *rect) {
+      if (!rect)
+        return setObject("che.video.update_screen_capture_region", "{}");
+      else
+        return setObject("che.video.update_screen_capture_region", "{\"top\":%d,\"left\":%d,\"bottom\":%d,\"right\":%d}", rect->top, rect->left, rect->bottom, rect->right);
     }
 #endif
 
@@ -1894,6 +2047,24 @@ public:
         return setObject("che.video.render_mode", "{\"uid\":%u,\"mode\":%d}", uid, renderMode);
     }
     
+    int setLocalVideoMirrorMode(VIDEO_MIRROR_MODE_TYPE mirrorMode) {
+        if (!m_parameter) return -ERR_NOT_INITIALIZED;
+        const char *value;
+        switch (mirrorMode) {
+        case VIDEO_MIRROR_MODE_AUTO:
+            value = "default";
+            break;
+        case VIDEO_MIRROR_MODE_ENABLED:
+            value = "forceMirror";
+            break;
+        case VIDEO_MIRROR_MODE_DISABLED:
+            value = "disableMirror";
+            break;
+        default:
+            return -ERR_INVALID_ARGUMENT;
+        }
+        return m_parameter->setString("che.video.localViewMirrorSetting", value);
+    }
 	int startRecordingService(const char* recordingKey) {
         return m_parameter ? m_parameter->setString("rtc.api.start_recording_service", recordingKey) : -ERR_NOT_INITIALIZED;
     }
@@ -1942,7 +2113,7 @@ public:
     }
     //only for live broadcasting
     int setVideoQualityParameters(bool preferFrameRateOverImageQuality) {
-        return m_parameter ? m_parameter->setBool("rtc.video.prefer_frame_rate", preferFrameRateOverImageQuality) : -ERR_NOT_INITIALIZED;
+        return setParameters("{\"rtc.video.prefer_frame_rate\":%s,\"che.video.prefer_frame_rate\":%s}", preferFrameRateOverImageQuality ? "true" : "false", preferFrameRateOverImageQuality ? "true" : "false");
     }
 protected:
     AParameter& parameter() {

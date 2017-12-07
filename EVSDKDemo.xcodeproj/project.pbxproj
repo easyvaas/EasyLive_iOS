@@ -10,7 +10,6 @@
 		0C0619751FB2D81800CA4090 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */; };
 		0C0619761FB2D81800CA4090 /* EVMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */; };
 		0C0619771FB2D81800CA4090 /* EVMessageFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */; };
-		0C0619781FB2D81800CA4090 /* EVRTCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */; };
 		0C06197A1FB2D81800CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
 		0C06197B1FB2D81800CA4090 /* EVVRFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */; };
 		0C06197C1FB2D81800CA4090 /* ios_player_dylib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619731FB2D7D700CA4090 /* ios_player_dylib.framework */; };
@@ -23,7 +22,6 @@
 		0C0619831FB2DA3E00CA4090 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */; };
 		0C0619841FB2DA3E00CA4090 /* EVMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */; };
 		0C0619851FB2DA3E00CA4090 /* EVMessageFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */; };
-		0C0619861FB2DA3E00CA4090 /* EVRTCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */; };
 		0C0619871FB2DA3E00CA4090 /* EVSDKBaseFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */; };
 		0C0619881FB2DA3E00CA4090 /* EVSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619711FB2D7D700CA4090 /* EVSocket.framework */; };
 		0C0619891FB2DA3E00CA4090 /* EVVRFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */; };
@@ -145,7 +143,6 @@
 		0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 		0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVMediaFramework.framework; sourceTree = "<group>"; };
 		0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVMessageFramework.framework; sourceTree = "<group>"; };
-		0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVRTCFramework.framework; sourceTree = "<group>"; };
 		0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVSDKBaseFramework.framework; sourceTree = "<group>"; };
 		0C0619711FB2D7D700CA4090 /* EVSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVSocket.framework; sourceTree = "<group>"; };
 		0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EVVRFramework.framework; sourceTree = "<group>"; };
@@ -265,7 +262,6 @@
 				0C9F081D1F3C13F500032D0E /* VideoToolbox.framework in Frameworks */,
 				0C06198B1FB2DA3E00CA4090 /* videoprp.framework in Frameworks */,
 				0C9F081B1F3C13EA00032D0E /* Security.framework in Frameworks */,
-				0C0619861FB2DA3E00CA4090 /* EVRTCFramework.framework in Frameworks */,
 				0C0619831FB2DA3E00CA4090 /* AgoraRtcEngineKit.framework in Frameworks */,
 				0C9F081A1F3C13E500032D0E /* QuartzCore.framework in Frameworks */,
 				0C0619851FB2DA3E00CA4090 /* EVMessageFramework.framework in Frameworks */,
@@ -292,7 +288,6 @@
 				0C0619751FB2D81800CA4090 /* AgoraRtcEngineKit.framework in Frameworks */,
 				0C0619761FB2D81800CA4090 /* EVMediaFramework.framework in Frameworks */,
 				0C0619771FB2D81800CA4090 /* EVMessageFramework.framework in Frameworks */,
-				0C0619781FB2D81800CA4090 /* EVRTCFramework.framework in Frameworks */,
 				0C06197A1FB2D81800CA4090 /* EVSocket.framework in Frameworks */,
 				0C06197B1FB2D81800CA4090 /* EVVRFramework.framework in Frameworks */,
 				0C06197C1FB2D81800CA4090 /* ios_player_dylib.framework in Frameworks */,
@@ -335,7 +330,6 @@
 				0C06196C1FB2D7D700CA4090 /* AgoraRtcEngineKit.framework */,
 				0C06196D1FB2D7D700CA4090 /* EVMediaFramework.framework */,
 				0C06196E1FB2D7D700CA4090 /* EVMessageFramework.framework */,
-				0C06196F1FB2D7D700CA4090 /* EVRTCFramework.framework */,
 				0C0619701FB2D7D700CA4090 /* EVSDKBaseFramework.framework */,
 				0C0619711FB2D7D700CA4090 /* EVSocket.framework */,
 				0C0619721FB2D7D700CA4090 /* EVVRFramework.framework */,
